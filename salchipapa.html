@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salchipapas - Punto DF</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="comidas.css">
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="images/logotipo.png" alt="Punto DF Logo">
+                </a>
+            </div>
+            <form id="searchForm" onsubmit="handleSearch(event)">
+                <input type="text" id="searchInput" placeholder="Buscar comida..." required>
+                <button type="submit">Buscar</button>
+            </form>
+            <div class="cart-icon" id="cartToggle">
+                <img src="images/carro.jpg" alt="Carrito">
+            </div>
+        </div>
+    </header>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <ul class="menu">
+                <li><a href="hamburguesa.html">Hamburguesas</a></li>
+                <li><a href="perros.html">Perros</a></li>
+                <li><a href="salchipapa.html">Salchipapas</a></li>
+                <li><a href="otras.html">Otras Comidas</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+        <!-- Miga de pan -->
+<nav id="breadcrumbNav" class="breadcrumb-container" style="display: none;">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+        <li class="breadcrumb-item active" id="currentBreadcrumb" aria-current="page"></li>
+    </ol>
+</nav>
+    <main>
+        <section>
+            <h2>Salchipapas</h2>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/salchimaduro.jpeg" class="card-img-top" alt="Salchipapa 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Salchimaduro</h5>
+                                <p class="card-text">¡Nuestra Salchimaduro es una delicia que combina lo mejor de lo tradicional con un toque dulce y crujiente! Esta exquisita preparación incluye generosas porciones de salchicha cortada, papas doradas, plátano maduro y maíz tierno. </p>
+                                <br>
+                                <h3>$25.000</h3>
+                                <button class="btn btn-primary add-to-cart">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/salchimixta.jpeg" class="card-img-top" alt="Salchipapa 2">
+                            <div class="card-body">
+                                <h5 class="card-title">salchimixta</h5>
+                                <p class="card-text">Nuestra Salchimixta es una explosión de sabores y texturas, perfecta para quienes buscan variedad en cada bocado. Esta delicia combina jugosos trozos de carne y pollo con papas crujientes, salchichas doradas y una generosa capa de queso derretido.</p>
+                                
+                                <h3>$35.000</h3>
+                                <button class="btn btn-primary add-to-cart">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/salchipiña.jpeg" class="card-img-top" alt="Salchipapa 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Salchipiña</h5>
+                                <p class="card-text">Nuestra Salchipiña es una mezcla perfecta de sabores y texturas. Disfruta de la combinación de salchicha jugosa y papas crujientes, complementadas con piña dulce y queso fundido. </p>
+                                <br>
+                                <br>
+                                <h3>$25.000</h3>
+                                <button class="btn btn-primary add-to-cart">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/salchiranchera.jpeg" class="card-img-top" alt="Salchipapa 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Salchiranchera</h5>
+                                <p class="card-text">Nuestra Salchiranchera es la opción perfecta para los amantes de las combinaciones ricas y sabrosas. Esta deliciosa salchipapa incluye huevo frito, salchicha jugosa, chorizo, tocineta crujiente, papas doradas y queso cheddar fundido.</p>
+                                <br>
+                                <h3>$28.000</h3>
+                                <button class="btn btn-primary add-to-cart">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/salchitodo.jpeg" class="card-img-top" alt="Salchipapa 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Salchitodo</h5>
+                                <p class="card-text">Nuestra Salchitodo es una experiencia culinaria completa que combina lo mejor de nuestros ingredientes. Con pollo jugoso, guacamole cremoso, plátano maduro, papas crujientes, salchicha sabrosa y costilla tierna, esta salchipapa ofrece una mezcla equilibrada de sabores y texturas.</p>
+                                <h3>$37.000</h3>
+                                <button class="btn btn-primary add-to-cart">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Apartado del carrito -->
+    <div class="cart-sidebar" id="cartSidebar"> 
+        <button class="btn btn-primary mb-3" id="backToMenu">Volver al Menu</button> <!-- Botón añadido -->
+        <h3>Comidas Seleccionadas</h3>
+        <ul id="cartItems"></ul>
+        <h4>Detalles de Pago</h4>
+        <input type="text" id="cardNumber" placeholder="Número de tarjeta" class="form-control mb-2">
+        <input type="text" id="phoneNumber" placeholder="Número de celular" class="form-control mb-2">
+        <button class="btn btn-success" id="submitOrder">Enviar</button>
+    </div>
+
+    <!-- Modal para confirmar el pedido -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Pedido Enviado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ¡Tu pedido ha sido enviado correctamente!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <br>
+     <br>
+     
+    <footer>
+        <p>&copy; 2024 BOX FOOD</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="js.js"></script>
+    <script src="home.js"></script>
+    <script src="miga.js"></script>
+</body>
+</html>

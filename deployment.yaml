@@ -1,0 +1,20 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boxfood-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: boxfood
+  template:
+    metadata:
+      labels:
+        app: boxfood
+    spec:
+      containers:
+      - name: boxfood-container
+        image: tu-usuario-docker/boxfood:latest
+        ports:
+        - containerPort: 8080
