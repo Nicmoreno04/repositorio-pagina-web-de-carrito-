@@ -13,7 +13,7 @@ function handleSearch(event) {
         salchipapas: "salchipapa.html",
         salchipapa: "salchipapa.html",
         otras : "otras.html",
-        lasagna: "otras_comidas.html#lasagna",
+        lasagna: "otras.html",
         alitas: "otras.html",
         mazorcada: "otras.html",
         arepa : "otras.html",
